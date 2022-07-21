@@ -9,11 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+   
+    @IBAction func getRequest(_ sender: Any) {
+        
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+        let session = URLSession.shared
+        session.dataTask(with: url) { (data, response, error) in
+            guard let response = response else { return }
+        }
     }
-
-
+    
+    @IBAction func postRequest(_ sender: Any) {
+    }
+    
 }
 
