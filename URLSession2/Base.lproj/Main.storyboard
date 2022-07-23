@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C8C-0S-yVG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="arc-QN-Npu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -9,32 +9,37 @@
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
-        <scene sceneID="Oye-B5-NLp">
+        <scene sceneID="ugd-Kc-1wf">
             <objects>
-                <navigationController id="C8C-0S-yVG" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="00c-pY-s84">
+                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" id="arc-QN-Npu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Jus-px-IPI"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ugR-co-jwL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="xLq-41-9vL" kind="relationship" relationship="rootViewController" id="9iN-RF-Uzp"/>
+                        <segue destination="xLq-41-9vL" kind="relationship" relationship="rootViewController" id="PtY-Nc-k2f"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F48-Xw-qzj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6nB-0C-0zI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1516" y="49"/>
+            <point key="canvasLocation" x="-1548" y="49"/>
         </scene>
         <!--Controls-->
         <scene sceneID="sHF-sR-JSa">
             <objects>
-                <viewController id="xLq-41-9vL" sceneMemberID="viewController">
+                <viewController id="xLq-41-9vL" customClass="ViewController" customModule="URLSession2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kKH-ln-v9s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6A-ob-SA7">
-                                <rect key="frame" x="20" y="149" width="374" height="195"/>
+                                <rect key="frame" x="20" y="148" width="374" height="200"/>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="Z6l-Mb-MK1"/>
+                                    <constraint firstAttribute="height" constant="200" id="jfp-ua-Gsb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Press to Download Image">
                                     <color key="titleColor" red="0.72232614439999998" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,11 +49,12 @@
                                     <segue destination="e1u-vV-xHQ" kind="show" id="QUf-5z-aMs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1u-Ct-Glk">
-                                <rect key="frame" x="20" y="370" width="374" height="195"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5D-HX-ZfR">
+                                <rect key="frame" x="20" y="368" width="374" height="200"/>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="195" id="K4a-g4-klp"/>
+                                    <constraint firstAttribute="height" constant="200" id="7gU-RM-IMx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="999" constant="374" id="wr0-jn-W5n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="GET">
@@ -56,42 +62,45 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17"/>
                                 </state>
                                 <connections>
-                                    <action selector="getRequest:" destination="g8m-1N-xff" eventType="touchUpInside" id="SaD-EM-oum"/>
+                                    <action selector="getRecuest:" destination="xLq-41-9vL" eventType="touchUpInside" id="dRk-Qu-4hW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoR-Rb-GHi">
-                                <rect key="frame" x="20" y="589" width="374" height="195"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCl-7C-npt">
+                                <rect key="frame" x="20" y="588" width="374" height="200"/>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="999" constant="374" id="cKQ-k2-xvx"/>
+                                    <constraint firstAttribute="height" constant="200" id="n0o-pg-aA0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="POST">
                                     <color key="titleColor" red="0.72232614439999998" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17"/>
                                 </state>
                                 <connections>
-                                    <action selector="postRequest:" destination="g8m-1N-xff" eventType="touchUpInside" id="avV-Za-NUs"/>
+                                    <action selector="postRecuest:" destination="xLq-41-9vL" eventType="touchUpInside" id="0w7-wH-Q3m"/>
+                                    <action selector="postRecuest:" destination="yYU-c6-7Hd" eventType="touchUpInside" id="VKW-PB-FAi"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eke-md-Trz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LoR-Rb-GHi" firstAttribute="top" secondItem="y1u-Ct-Glk" secondAttribute="bottom" constant="24" id="8LA-4i-4m1"/>
-                            <constraint firstItem="l6A-ob-SA7" firstAttribute="trailing" secondItem="y1u-Ct-Glk" secondAttribute="trailing" id="EBy-cm-isd"/>
-                            <constraint firstItem="y1u-Ct-Glk" firstAttribute="trailing" secondItem="kKH-ln-v9s" secondAttribute="trailingMargin" id="GV6-gy-lR2"/>
-                            <constraint firstItem="eke-md-Trz" firstAttribute="bottom" secondItem="LoR-Rb-GHi" secondAttribute="bottom" constant="78" id="HBk-FV-51s"/>
-                            <constraint firstItem="LoR-Rb-GHi" firstAttribute="trailing" secondItem="y1u-Ct-Glk" secondAttribute="trailing" id="M4V-32-pVF"/>
-                            <constraint firstItem="LoR-Rb-GHi" firstAttribute="leading" secondItem="y1u-Ct-Glk" secondAttribute="leading" id="Zhg-7p-2fL"/>
-                            <constraint firstItem="y1u-Ct-Glk" firstAttribute="leading" secondItem="kKH-ln-v9s" secondAttribute="leadingMargin" id="dQS-EF-i3v"/>
-                            <constraint firstItem="y1u-Ct-Glk" firstAttribute="top" secondItem="kKH-ln-v9s" secondAttribute="top" constant="370" id="dfr-b3-8Sw"/>
-                            <constraint firstItem="l6A-ob-SA7" firstAttribute="leading" secondItem="y1u-Ct-Glk" secondAttribute="leading" id="eWD-Jj-51N"/>
-                            <constraint firstItem="l6A-ob-SA7" firstAttribute="top" secondItem="eke-md-Trz" secondAttribute="top" constant="61" id="laZ-c3-Ntn"/>
-                            <constraint firstItem="y1u-Ct-Glk" firstAttribute="top" secondItem="l6A-ob-SA7" secondAttribute="bottom" constant="26" id="piM-0a-gFg"/>
+                            <constraint firstItem="l6A-ob-SA7" firstAttribute="top" secondItem="eke-md-Trz" secondAttribute="top" constant="60" id="2Lk-vD-VvA"/>
+                            <constraint firstItem="rCl-7C-npt" firstAttribute="centerX" secondItem="eke-md-Trz" secondAttribute="centerX" id="KVl-u0-3PN"/>
+                            <constraint firstItem="rCl-7C-npt" firstAttribute="top" secondItem="C5D-HX-ZfR" secondAttribute="bottom" constant="20" id="LMw-r6-qmo"/>
+                            <constraint firstItem="C5D-HX-ZfR" firstAttribute="centerX" secondItem="eke-md-Trz" secondAttribute="centerX" id="N3U-Da-bWe"/>
+                            <constraint firstItem="l6A-ob-SA7" firstAttribute="centerX" secondItem="eke-md-Trz" secondAttribute="centerX" id="mrI-MB-JK2"/>
+                            <constraint firstItem="C5D-HX-ZfR" firstAttribute="top" secondItem="l6A-ob-SA7" secondAttribute="bottom" constant="20" id="x2K-NP-C5O"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Controls" id="QW7-XC-Dhi"/>
+                    <connections>
+                        <outlet property="view" destination="C5D-HX-ZfR" id="O4t-jS-aeH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWe-CA-RBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="g8m-1N-xff" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="yYU-c6-7Hd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-733.33333333333337" y="48.883928571428569"/>
         </scene>
