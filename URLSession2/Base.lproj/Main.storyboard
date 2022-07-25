@@ -97,7 +97,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17"/>
                                 </state>
                                 <connections>
-                                    <segue destination="v4r-fW-mbv" kind="show" id="FD7-MS-dFA"/>
+                                    <segue destination="v4r-fW-mbv" kind="show" identifier="tableView" customClass="CoursesViewController" customModule="URLSession2" customModuleProvider="target" id="Cil-Sj-XVW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -127,13 +127,13 @@
         <!--Our courses-->
         <scene sceneID="Coz-yA-OKM">
             <objects>
-                <tableViewController title="Our courses" id="v4r-fW-mbv" customClass="TableViewController" customModule="URLSession2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Our courses" id="v4r-fW-mbv" customClass="CoursesViewController" customModule="URLSession2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eOE-uX-bvg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="170" id="jL4-Ro-6nT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="170" id="jL4-Ro-6nT">
                                 <rect key="frame" x="0.0" y="28" width="414" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jL4-Ro-6nT" id="CaC-b4-SKf">
@@ -191,25 +191,22 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="v4r-fW-mbv" id="h3Z-g5-eYl"/>
-                            <outlet property="delegate" destination="v4r-fW-mbv" id="85S-L1-uX1"/>
-                        </connections>
+                        <sections/>
                     </tableView>
                     <navigationItem key="navigationItem" id="OY7-3Z-cI8"/>
                     <connections>
-                        <outlet property="tableView" destination="eOE-uX-bvg" id="Qgy-y8-Q09"/>
-                        <segue destination="Vqg-Ik-f8n" kind="show" id="cew-wk-6Vk"/>
+                        <outlet property="tableView" destination="eOE-uX-bvg" id="YM3-1m-CQE"/>
+                        <segue destination="Vqg-Ik-f8n" kind="show" identifier="webViewController" id="Dn0-qe-jfs"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kv-Zj-TDU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="73.913043478260875" y="426.5625"/>
+            <point key="canvasLocation" x="74" y="427"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="o3D-Eh-zB4">
             <objects>
-                <viewController id="Vqg-Ik-f8n" sceneMemberID="viewController">
+                <viewController id="Vqg-Ik-f8n" customClass="WebViewController" customModule="URLSession2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kSE-DR-t51">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
