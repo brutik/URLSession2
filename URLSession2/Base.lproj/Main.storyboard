@@ -97,7 +97,8 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17"/>
                                 </state>
                                 <connections>
-                                    <segue destination="v4r-fW-mbv" kind="show" identifier="tableView" customClass="CoursesViewController" customModule="URLSession2" customModuleProvider="target" id="Cil-Sj-XVW"/>
+                                    <action selector="tableView:" destination="yYU-c6-7Hd" eventType="touchUpInside" id="kqZ-Dv-3Z3"/>
+                                    <segue destination="v4r-fW-mbv" kind="show" identifier="CoursesViewController" id="ugn-az-DZr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -195,7 +196,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="OY7-3Z-cI8"/>
                     <connections>
-                        <outlet property="tableView" destination="eOE-uX-bvg" id="YM3-1m-CQE"/>
+                        <outlet property="tableView" destination="eOE-uX-bvg" id="0HO-f5-eGF"/>
                         <segue destination="Vqg-Ik-f8n" kind="show" identifier="webViewController" id="Dn0-qe-jfs"/>
                     </connections>
                 </tableViewController>

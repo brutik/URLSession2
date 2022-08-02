@@ -14,8 +14,10 @@
 		AE38CEF02887091E00669B58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE38CEEE2887091E00669B58 /* LaunchScreen.storyboard */; };
 		AE38CEF92887335400669B58 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE38CEF82887335400669B58 /* ImageViewController.swift */; };
 		AE5305C6288C6BDA00AC30A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5305C5288C6BDA00AC30A9 /* ViewController.swift */; };
+		AE7EDE9228983D7B00021391 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7EDE9128983D7B00021391 /* Course.swift */; };
 		AEA914E0288F0A6400D24654 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA914DF288F0A6400D24654 /* CoursesViewController.swift */; };
 		AEA914E3288F1D0400D24654 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA914E2288F1D0400D24654 /* WebViewController.swift */; };
+		AEF053852899871C00179E68 /* WebsiteDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF053842899871C00179E68 /* WebsiteDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +30,10 @@
 		AE38CEF12887091E00669B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE38CEF82887335400669B58 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		AE5305C5288C6BDA00AC30A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE7EDE9128983D7B00021391 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		AEA914DF288F0A6400D24654 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		AEA914E2288F1D0400D24654 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		AEF053842899871C00179E68 /* WebsiteDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				AE38CEF82887335400669B58 /* ImageViewController.swift */,
 				AE38CEE92887091D00669B58 /* Main.storyboard */,
 				AEA914E2288F1D0400D24654 /* WebViewController.swift */,
+				AE7EDE9128983D7B00021391 /* Course.swift */,
+				AEF053842899871C00179E68 /* WebsiteDescription.swift */,
 				AEA914DF288F0A6400D24654 /* CoursesViewController.swift */,
 				AE5305C5288C6BDA00AC30A9 /* ViewController.swift */,
 				AE38CEEC2887091E00669B58 /* Assets.xcassets */,
@@ -147,6 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE38CEE42887091D00669B58 /* AppDelegate.swift in Sources */,
+				AE7EDE9228983D7B00021391 /* Course.swift in Sources */,
+				AEF053852899871C00179E68 /* WebsiteDescription.swift in Sources */,
 				AEA914E3288F1D0400D24654 /* WebViewController.swift in Sources */,
 				AE38CEF92887335400669B58 /* ImageViewController.swift in Sources */,
 				AE5305C6288C6BDA00AC30A9 /* ViewController.swift in Sources */,
